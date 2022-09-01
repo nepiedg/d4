@@ -7,9 +7,9 @@ spring:
   # 数据源配置，请修改为你项目的实际配置
   datasource:
     username: "root"
-    password: "admin"
+    password: "ffca5dfa3f326cb8"
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.214.19:3306/fast13?useSSL=false&serverTimezone=UTC&characterEncoding=UTF8
+    url: jdbc:mysql://192.168.1.11:3306/d4?useSSL=false&serverTimezone=UTC&characterEncoding=UTF8
 # 配置 MyBatis
 mybatis:
   mapper-locations: classpath:mapper/*.xml

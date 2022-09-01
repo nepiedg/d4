@@ -1,60 +1,43 @@
 package com.example.d4.entity;
 
-public class User {
-    private Integer id;
-    private String username;
-    private String nickname;
-    private Integer group_id;
-    private String email;
+import lombok.Data;
+import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.List;
+import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+/**
+ * 用户信息
+ */
+@Data
+public class User implements Serializable {
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", nickname='" + nickname + '\'' +
-                ", group_id=" + group_id +
-                ", email='" + email + '\'' +
-                '}';
-    }
+    private static final long serialVersionUID = 1L;
 
-    public Integer getId() {
-        return id;
-    }
+    private Long id;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
-    public String getUsername() {
-        return username;
-    }
+    //姓名
+    private String name;
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
 
-    public String getNickname() {
-        return nickname;
-    }
+    //手机号
+    private String phone;
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
 
-    public Integer getGroup_id() {
-        return group_id;
-    }
+    //性别 0 女 1 男
+    private String sex;
 
-    public void setGroup_id(Integer group_id) {
-        this.group_id = group_id;
-    }
 
-    public String getEmail() {
-        return email;
-    }
+    //身份证号
+    private String idNumber;
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+
+    //头像
+    private String avatar;
+
+
+    //状态 0:禁用，1:正常
+    private Integer status;
 }
