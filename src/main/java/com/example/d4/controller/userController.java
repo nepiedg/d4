@@ -7,13 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
-
 @RestController
 @RequestMapping("/")
 public class userController {
     @PostMapping("/login")
     public void login(@RequestParam Map<String, Object> params) {
-        System.out.println(params.get("name"));
-    }
 
+    }
 }
